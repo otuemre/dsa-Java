@@ -31,6 +31,7 @@
 **Stack**: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the top, similar to a stack of books. Common operations include:
 
 Methods of Stack:
+- `.empty(): boolean`: Checks if the stack is empty or not.
 - `.push(Object x): void`: Adds an element to the top of the stack.
 - `.pop(): Object`: Removes and returns the topmost element.
 - `.peek(): Object`: Returns the topmost element without removing it.
