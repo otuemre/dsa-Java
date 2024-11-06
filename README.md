@@ -30,3 +30,4 @@
 - **Stack**: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the top, similar to a stack of books. [See more](./src/stacks/STACK.md)
 - **Queue**: A First-In-First-Out (FIFO) data structure where elements are added at the back and removed from the front, like a line of people waiting. It is useful for processing items in the order they arrive. [See More](./src/queues/QUEUE.md)
 - **PriorityQueue**: A data structure where elements are served based on their priority rather than the order they were added. Elements with higher priority are dequeued first. It is typically used for processing tasks in the order of priority. [See More](./src/priorityQueues/PRIORITYQUEUE.md)
+- **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/linkedLists/LINKEDLIST.md)
