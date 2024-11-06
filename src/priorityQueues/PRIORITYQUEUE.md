@@ -24,6 +24,15 @@ Since `PriorityQueue` is part of the `Queue` interface, it also supports methods
 - **Real-Time Event Scheduling** - Manages events based on priority, where high-priority events are processed first.
 
 ## Code Example:
+
+**Imports**:
+```
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+```
+
+**Code**:
 ```
 // Creating a LinkedList as Queue (FIFO)
 Queue<Double> queue = new LinkedList<>();

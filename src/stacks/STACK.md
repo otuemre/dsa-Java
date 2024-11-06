@@ -15,6 +15,13 @@
 - Managing function calls in programming (Call Stack)
 
 ## Code Example:
+
+**Imports**:
+```
+import java.util.Stack;
+```
+
+**Code**:
 ```
 Stack<String> stack = new Stack<>();
 

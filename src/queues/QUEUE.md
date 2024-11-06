@@ -24,6 +24,14 @@ Since `Queue` is part of the `Collection` framework, it also supports methods in
 - **Task Processing** - Manages events or tasks that need to be processed in the order they were added.
 
 ## Code Example:
+
+**Imports**:
+```
+import java.util.LinkedList;
+import java.util.Queue;
+```
+
+**Code**:
 ```
 // We cannot create an instance of Queue directly as it is an interface.
 // Instead, we can instantiate it using a class that implements Queue, like LinkedList or PriorityQueue.
