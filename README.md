@@ -33,3 +33,7 @@
 - **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/linkedLists/LINKEDLIST.md)
 - **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/dynamicArrays/DYNAMICARRAY.md)
 - **ArrayList vs LinkedList**: Both classes are part of the Java Collections Framework and implement the List interface, but they are optimized for different use cases. This code tests various operations and highlights the performance characteristics of each data structure. [See More](./src/arraylistVsLinkedlist/COMPARISON.md)
+
+## Big O Notation
+
+- Big O notation is a mathematical concept that describes how an algorithm's runtime or space requirements grow as the input size increases. Big O focuses on the **number of operations** or **steps** an algorithm needs to complete rather than exact execution time, making it machine-independent. [See More](./src/bigO/BIGO.md)
