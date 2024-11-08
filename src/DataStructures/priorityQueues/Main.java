@@ -1,4 +1,4 @@
-package priorityQueues;
+package DataStructures.priorityQueues;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

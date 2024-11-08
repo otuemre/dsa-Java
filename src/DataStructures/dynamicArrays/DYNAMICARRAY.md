@@ -46,7 +46,7 @@ A resizable array that can grow or shrink at runtime. This implementation create
 
 **DynamicArray Class**:
 ```
-package dynamicArrays;
+package DataStructures.dynamicArrays;
 
 public class DynamicArray {
     private int size;

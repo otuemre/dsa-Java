@@ -1,4 +1,4 @@
-package arraylistVsLinkedlist;
+package DataStructures.arraylistVsLinkedlist;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -27,12 +27,12 @@
 
 ## Basic Data Structures
 
-- **Stack**: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the top, similar to a stack of books. [See more](./src/stacks/STACK.md)
-- **Queue**: A First-In-First-Out (FIFO) data structure where elements are added at the back and removed from the front, like a line of people waiting. It is useful for processing items in the order they arrive. [See More](./src/queues/QUEUE.md)
-- **PriorityQueue**: A data structure where elements are served based on their priority rather than the order they were added. Elements with higher priority are dequeued first. It is typically used for processing tasks in the order of priority. [See More](./src/priorityQueues/PRIORITYQUEUE.md)
-- **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/linkedLists/LINKEDLIST.md)
-- **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/dynamicArrays/DYNAMICARRAY.md)
-- **ArrayList vs LinkedList**: Both classes are part of the Java Collections Framework and implement the List interface, but they are optimized for different use cases. This code tests various operations and highlights the performance characteristics of each data structure. [See More](./src/arraylistVsLinkedlist/COMPARISON.md)
+- **Stack**: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the top, similar to a stack of books. [See more](./src/DataStructures/stacks/STACK.md)
+- **Queue**: A First-In-First-Out (FIFO) data structure where elements are added at the back and removed from the front, like a line of people waiting. It is useful for processing items in the order they arrive. [See More](./src/DataStructures/queues/QUEUE.md)
+- **PriorityQueue**: A data structure where elements are served based on their priority rather than the order they were added. Elements with higher priority are dequeued first. It is typically used for processing tasks in the order of priority. [See More](./src/DataStructures/priorityQueues/PRIORITYQUEUE.md)
+- **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/DataStructures/linkedLists/LINKEDLIST.md)
+- **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/DataStructures/dynamicArrays/DYNAMICARRAY.md)
+- **ArrayList vs LinkedList**: Both classes are part of the Java Collections Framework and implement the List interface, but they are optimized for different use cases. This code tests various operations and highlights the performance characteristics of each data structure. [See More](./src/DataStructures/arraylistVsLinkedlist/COMPARISON.md)
 
 ## Big O Notation
 

@@ -1,4 +1,4 @@
-package dynamicArrays;
+package DataStructures.dynamicArrays;
 
 public class DynamicArray {
     private int size;
