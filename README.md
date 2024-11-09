@@ -37,3 +37,7 @@
 ## Big O Notation
 
 - Big O notation is a mathematical concept that describes how an algorithm's runtime or space requirements grow as the input size increases. Big O focuses on the **number of operations** or **steps** an algorithm needs to complete rather than exact execution time, making it machine-independent. [See More](./src/bigO/BIGO.md)
+
+## Searching Algorithms
+
+- **LinearSearch**: Iterates through a collection one element at a time, comparing each element to the target. If it finds a match, it returns the index of that element; otherwise, it returns `-1`, indicating that the element is not present in the collection. [See More](./src/SearchAlgorithms/linearSearch/LINEARSEARCH.md)
