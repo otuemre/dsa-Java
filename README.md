@@ -32,7 +32,7 @@
 - **PriorityQueue**: A data structure where elements are served based on their priority rather than the order they were added. Elements with higher priority are dequeued first. It is typically used for processing tasks in the order of priority. [See More](./src/DataStructures/priorityQueues/PRIORITYQUEUE.md)
 - **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/DataStructures/linkedLists/LINKEDLIST.md)
 - **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/DataStructures/dynamicArrays/DYNAMICARRAY.md)
-- **ArrayList vs LinkedList**: Both classes are part of the Java Collections Framework and implement the List interface, but they are optimized for different use cases. This code tests various operations and highlights the performance characteristics of each data structure. [See More](./src/DataStructures/arraylistVsLinkedlist/COMPARISON.md)
+- **ArrayList vs LinkedList**: An `ArrayList` in Java stores elements in a dynamic array, providing fast access by index but slower insertions and deletions, especially in large lists. A `LinkedList` stores elements in nodes linked by pointers, allowing fast insertions and deletions but slower access by index. [See More](./src/DataStructures/arraylistVsLinkedlist/COMPARISON.md)
 
 ## Big O Notation
 
@@ -40,4 +40,5 @@
 
 ## Searching Algorithms
 
-- **LinearSearch**: Iterates through a collection one element at a time, comparing each element to the target. If it finds a match, it returns the index of that element; otherwise, it returns `-1`, indicating that the element is not present in the collection. [See More](./src/SearchAlgorithms/linearSearch/LINEARSEARCH.md)
+- **LinearSearch**: Iterates through a collection one element at a time, comparing each element to the target. If it finds a match, it returns the index of that element; otherwise, it returns `-1`, indicating that the element is not present in the collection. The time complexity of binary search is `O(n)`. [See More](./src/SearchAlgorithms/linearSearch/LINEARSEARCH.md)
+- **BinarySearch** works by eliminating half of the search space with each step, making it significantly faster than linear search for large, sorted arrays. The time complexity of binary search is `O(log n)`. [See More](./src/SearchAlgorithms/binarySearch/BINARYSEARCH.md)
