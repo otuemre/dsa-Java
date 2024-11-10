@@ -1,6 +1,6 @@
 # Data Structures & Algorithm in Java
 
-**Note**: This project will follow "Bro Code - Data Structures and Algorithms" playlist!
+**Note**: This project will follow "[Bro Code](https://www.youtube.com/@BroCodez) - Data Structures and Algorithms" playlist!
 
 ## Project Content
 - Basic Data Structures
@@ -38,7 +38,21 @@
 
 - Big O notation is a mathematical concept that describes how an algorithm's runtime or space requirements grow as the input size increases. Big O focuses on the **number of operations** or **steps** an algorithm needs to complete rather than exact execution time, making it machine-independent. [See More](./src/bigO/BIGO.md)
 
+**Big-O Time Complexity Comparison**:
+![Big-O Time Complexity Comparison](./images/Big-O-Complexity-Comparison.jpeg)
+
+### Big O Cheatsheet
+
+![Big-O Complexity Cheatsheet](./images/big-o-cheat-sheet-poster.png)
+
 ## Searching Algorithms
 
 - **LinearSearch**: Iterates through a collection one element at a time, comparing each element to the target. If it finds a match, it returns the index of that element; otherwise, it returns `-1`, indicating that the element is not present in the collection. The time complexity of binary search is `O(n)`. [See More](./src/SearchAlgorithms/linearSearch/LINEARSEARCH.md)
-- **BinarySearch** works by eliminating half of the search space with each step, making it significantly faster than linear search for large, sorted arrays. The time complexity of binary search is `O(log n)`. [See More](./src/SearchAlgorithms/binarySearch/BINARYSEARCH.md)
+- **BinarySearch**: Works by eliminating half of the search space with each step, making it significantly faster than linear search for large, sorted arrays. The time complexity of binary search is `O(log n)`. [See More](./src/SearchAlgorithms/binarySearch/BINARYSEARCH.md)
+- **InterpolationSearch**: Finds the position of a target value within a sorted array by calculating a position estimate (probe) based on the values of the target and the current bounds. It is most efficient with uniformly distributed data `O(log(log(n)))`. [See More](./src/SearchAlgorithms/interpolationSearch/INTERPOLATION.md)
+
+## Acknowledgments
+
+- Data Structures & Algorithm Playlist by [Bro Code](https://www.youtube.com/@BroCodez)
+- Big-O Time Complexity Comparison by [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
+- Big-O Complexity Cheat Sheet from [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
