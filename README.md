@@ -51,6 +51,10 @@
 - **BinarySearch**: Works by eliminating half of the search space with each step, making it significantly faster than linear search for large, sorted arrays. The time complexity of binary search is `O(log n)`. [See More](./src/SearchAlgorithms/binarySearch/BINARYSEARCH.md)
 - **InterpolationSearch**: Finds the position of a target value within a sorted array by calculating a position estimate (probe) based on the values of the target and the current bounds. It is most efficient with uniformly distributed data `O(log(log(n)))`. [See More](./src/SearchAlgorithms/interpolationSearch/INTERPOLATION.md)
 
+## Sorting Algorithms
+
+- **Bubble Sort**: Repeatedly compares and swaps adjacent elements if they are out of order. After each full pass through the array, the largest unsorted element is moved to its correct position at the end, creating a "bubble" effect as the largest elements accumulate at the end of the array. [See More](./src/SortAlgorithms/bubbleSort/BUBBLESORT.md)
+
 ## Acknowledgments
 
 - Data Structures & Algorithm Playlist by [Bro Code](https://www.youtube.com/@BroCodez)
