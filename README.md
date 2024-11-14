@@ -54,6 +54,7 @@
 ## Sorting Algorithms
 
 - **Bubble Sort**: Repeatedly compares and swaps adjacent elements if they are out of order. After each full pass through the array, the largest unsorted element is moved to its correct position at the end, creating a "bubble" effect as the largest elements accumulate at the end of the array. [See More](./src/SortAlgorithms/bubbleSort/BUBBLESORT.md)
+- **Selection Sort**: Repeatedly finds the minimum element from the unsorted part of the array and swaps it with the element at the beginning of the unsorted section. This process continues until the entire array is sorted. [See More](./src/SortAlgorithms/selectionSort/SELECTIONSORT.md)
 
 ## Acknowledgments
 
