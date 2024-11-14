@@ -46,83 +46,87 @@ Java's `LinkedList` class can function as both a **stack** and a **queue**, usin
 | `.removeLast(): Object`           | Removes and returns the tail of the list.              |
 
 ## Code Example:
-**Imports**:
-```
+**Code Example**:
+```java
+package DataStructures.linkedLists;
+
 import java.util.LinkedList;
-```
 
-**Code**:
-```
-// Creating LinkedList --> It is a doubly LinkedList
-LinkedList<String> likeStack = new LinkedList<>();
+public class Main {
 
-System.out.println(" --- STACK --- ");
+    public static void main(String[] args) {
+        // Creating LinkedList --> It is a doubly LinkedList
+        LinkedList<String> likeStack = new LinkedList<>();
 
-// LinkedList can be treated like Stack -> push(), pop(), peek()
-likeStack.push("A");
-likeStack.push("B");
-likeStack.push("C");
-likeStack.push("D");
-likeStack.push("F");
+        System.out.println(" --- STACK --- ");
 
-// Removing top most item like its Stack
-String f = likeStack.pop(); // F
-System.out.println("Popped Item: " + f);
+        // LinkedList can be treated like Stack -> push(), pop(), peek()
+        likeStack.push("A");
+        likeStack.push("B");
+        likeStack.push("C");
+        likeStack.push("D");
+        likeStack.push("F");
 
-// Displaying LinkedList
-System.out.println(likeStack);
+        // Removing top most item like its Stack
+        String f = likeStack.pop(); // F
+        System.out.println("Popped Item: " + f);
 
-System.out.println(" --- QUEUE --- ");
+        // Displaying LinkedList
+        System.out.println(likeStack);
 
-// LinkedList can be also treated as Queue
-LinkedList<String> likeQueue = new LinkedList<>();
+        System.out.println(" --- QUEUE --- ");
 
-// LinkedList can be treated like Queue -> offer(), poll(), peek()
-likeQueue.offer("A");
-likeQueue.offer("B");
-likeQueue.offer("C");
-likeQueue.offer("D");
-likeQueue.offer("F");
+        // LinkedList can be also treated as Queue
+        LinkedList<String> likeQueue = new LinkedList<>();
 
-// Removing the first-in item like it is a queue
-String a = likeQueue.poll(); // A
-System.out.println("First Item: " + a);
+        // LinkedList can be treated like Queue -> offer(), poll(), peek()
+        likeQueue.offer("A");
+        likeQueue.offer("B");
+        likeQueue.offer("C");
+        likeQueue.offer("D");
+        likeQueue.offer("F");
 
-// Displaying LinkedList
-System.out.println(likeQueue);
+        // Removing the first-in item like it is a queue
+        String a = likeQueue.poll(); // A
+        System.out.println("First Item: " + a);
 
-// Adding item to LinkedList using .add()
-likeQueue.add(3, "E");
-System.out.println("After Adding 'E' to 3rd index: " + likeQueue);
+        // Displaying LinkedList
+        System.out.println(likeQueue);
 
-// Removing item in LinkedList using .remove()
-likeQueue.remove("E");
-System.out.println("After Deleting 'E': " + likeQueue);
+        // Adding item to LinkedList using .add()
+        likeQueue.add(3, "E");
+        System.out.println("After Adding 'E' to 3rd index: " + likeQueue);
 
-// Searching an item in LinkedList using .indexOf()
-int d = likeQueue.indexOf("D");
-System.out.println("Index of D: " + d);
+        // Removing item in LinkedList using .remove()
+        likeQueue.remove("E");
+        System.out.println("After Deleting 'E': " + likeQueue);
 
-// Getting the head of LinkedList using .peekFirst()
-System.out.println("Head of LinkedList: " + likeQueue.peekFirst());
+        // Searching an item in LinkedList using .indexOf()
+        int d = likeQueue.indexOf("D");
+        System.out.println("Index of D: " + d);
 
-// Getting the tail of LinkedList using .peekLast()
-System.out.println("Tail of LinkedList: " + likeQueue.peekLast());
+        // Getting the head of LinkedList using .peekFirst()
+        System.out.println("Head of LinkedList: " + likeQueue.peekFirst());
 
-// Adding new item to head using .addFirst()
-likeQueue.addFirst("0");
-System.out.println("LinkedList with new head: " + likeQueue);
+        // Getting the tail of LinkedList using .peekLast()
+        System.out.println("Tail of LinkedList: " + likeQueue.peekLast());
 
-// Adding new item to tail using .addLast()
-likeQueue.addLast("G");
-System.out.println("LinkedList with new tail: " + likeQueue);
+        // Adding new item to head using .addFirst()
+        likeQueue.addFirst("0");
+        System.out.println("LinkedList with new head: " + likeQueue);
 
-// Removing head of LinkedList using .removeFirst()
-String head = likeQueue.removeFirst();
-// Removing tail of LinkedList using .removeLast()
-String tail = likeQueue.removeLast();
-System.out.println("Head: " + head + " / Tail: " + tail);
-System.out.println(likeQueue);
+        // Adding new item to tail using .addLast()
+        likeQueue.addLast("G");
+        System.out.println("LinkedList with new tail: " + likeQueue);
+
+        // Removing head of LinkedList using .removeFirst()
+        String head = likeQueue.removeFirst();
+        // Removing tail of LinkedList using .removeLast()
+        String tail = likeQueue.removeLast();
+        System.out.println("Head: " + head + " / Tail: " + tail);
+        System.out.println(likeQueue);
+    }
+}
 ```
 
 **Output**:

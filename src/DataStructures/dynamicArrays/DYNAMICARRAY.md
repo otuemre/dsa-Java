@@ -45,7 +45,7 @@ A resizable array that can grow or shrink at runtime. This implementation create
 ## Code Example
 
 **DynamicArray Class**:
-```
+```java
 package DataStructures.dynamicArrays;
 
 public class DynamicArray {
@@ -176,52 +176,59 @@ public class DynamicArray {
 }
 ```
 
-**Main Class**:
-```
-// Creating an instance of our DynamicArray
-DynamicArray dynamicArray = new DynamicArray(5);
+**Example Usage**:
+```java
+package DataStructures.dynamicArrays;
 
-// Adding elements to the dynamic array using .add()
-dynamicArray.add("A");
-dynamicArray.add("B");
-dynamicArray.add("C");
+public class Main {
 
-// Checking if the array is empty or not using .isEmpty()
-System.out.println("Is Empty? " + dynamicArray.isEmpty()); // Expected output: false
+    public static void main(String[] args) {
+        // Creating an instance of our DynamicArray
+        DynamicArray dynamicArray = new DynamicArray(5);
 
-// Checking the size and the capacity of the array using .getSize() and .getCapacity()
-System.out.println("Size: " + dynamicArray.getSize() + " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
+        // Adding elements to the dynamic array using .add()
+        dynamicArray.add("A");
+        dynamicArray.add("B");
+        dynamicArray.add("C");
 
-// Printing the array - .toString()
-System.out.println("Printing the dynamic array: " + dynamicArray); // Expected output: [A, B, C]
+        // Checking if the array is empty or not using .isEmpty()
+        System.out.println("Is Empty? " + dynamicArray.isEmpty()); // Expected output: false
 
-// Inserting an element at the given index using .insert()
-dynamicArray.insert(0, "X");
-System.out.println("After inserting an element at index 0: " + dynamicArray); // Expected output: [X, A, B, C]
+        // Checking the size and the capacity of the array using .getSize() and .getCapacity()
+        System.out.println("Size: " + dynamicArray.getSize() + " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
 
-// Deleting an element from the array using .delete()
-dynamicArray.delete("A");
-System.out.println("After deleting 'A': " + dynamicArray); // Expected output: [X, B, C]
+        // Printing the array - .toString()
+        System.out.println("Printing the dynamic array: " + dynamicArray); // Expected output: [A, B, C]
 
-// Searching for an element inside the array using .search()
-int index = dynamicArray.search("C");
-System.out.println("Index of 'C': " + index); // Expected output: 2
-System.out.println("Index of a non-existing element 'Z': " + dynamicArray.search("Z")); // Expected output: -1
+        // Inserting an element at the given index using .insert()
+        dynamicArray.insert(0, "X");
+        System.out.println("After inserting an element at index 0: " + dynamicArray); // Expected output: [X, A, B, C]
 
-// Expanding the array to grow capacity. It will grow when the size >= capacity!
-System.out.println("Size: " + dynamicArray.getSize() + " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
-dynamicArray.add("D");
-dynamicArray.add("E");
-dynamicArray.add("F");
-System.out.println("Size: " + dynamicArray.getSize() +
-        " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 6 - 10
+        // Deleting an element from the array using .delete()
+        dynamicArray.delete("A");
+        System.out.println("After deleting 'A': " + dynamicArray); // Expected output: [X, B, C]
 
-// Deleting items to potentially shrink the capacity. It will shrink when size <= capacity / 3!
-dynamicArray.delete("F"); // Expected size and capacity: 5 - 10
-dynamicArray.delete("E"); // Expected size and capacity: 4 - 10
-dynamicArray.delete("D");
-System.out.println("Size: " + dynamicArray.getSize() +
-        " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
+        // Searching for an element inside the array using .search()
+        int index = dynamicArray.search("C");
+        System.out.println("Index of 'C': " + index); // Expected output: 2
+        System.out.println("Index of a non-existing element 'Z': " + dynamicArray.search("Z")); // Expected output: -1
+
+        // Expanding the array to grow capacity. It will grow when the size >= capacity!
+        System.out.println("Size: " + dynamicArray.getSize() + " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
+        dynamicArray.add("D");
+        dynamicArray.add("E");
+        dynamicArray.add("F");
+        System.out.println("Size: " + dynamicArray.getSize() +
+                " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 6 - 10
+
+        // Deleting items to potentially shrink the capacity. It will shrink when size <= capacity / 3!
+        dynamicArray.delete("F"); // Expected size and capacity: 5 - 10
+        dynamicArray.delete("E"); // Expected size and capacity: 4 - 10
+        dynamicArray.delete("D");
+        System.out.println("Size: " + dynamicArray.getSize() +
+                " - Capacity: " + dynamicArray.getCapacity()); // Expected output: 3 - 5
+    }
+}
 ```
 
 **Output**:

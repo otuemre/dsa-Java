@@ -14,76 +14,80 @@ This project demonstrates a performance comparison between `LinkedList` and `Arr
 
 ## Code Example
 
-**Imports**:
-```
+**Example Usage**:
+```java
+package DataStructures.arraylistVsLinkedlist;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
-```
 
-**Code**:
-```
-LinkedList<Integer> linkedList = new LinkedList<>();
-ArrayList<Integer> arrayList = new ArrayList<>();
+public class Main {
 
-long startTime;
-long endTime;
-long elapsedTime;
+    public static void main(String[] args) {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
 
-// Adding 1,000,000 elements to both lists
-for (int i = 0; i < 1000000; i++) {
-    linkedList.add(i);
-    arrayList.add(i);
+        long startTime;
+        long endTime;
+        long elapsedTime;
+
+        // Adding 1,000,000 elements to both lists
+        for (int i = 0; i < 1000000; i++) {
+            linkedList.add(i);
+            arrayList.add(i);
+        }
+
+        // ------------------ LinkedList ------------------
+        startTime = System.nanoTime();
+
+        // Getting First Element - Constant time (O(1))
+        // linkedList.get(0); --> 15600ns (requires traversing the list in LinkedList)
+
+        // Getting Element in the Middle - Linear time (O(n))
+        // linkedList.get(500000); --> 4440300ns (LinkedList must traverse to the middle)
+
+        // Getting the Last Element - Constant time (O(1)) because LinkedList maintains both head and tail pointers
+        // linkedList.get(999999); --> 16800ns
+
+        // Removing the First Element - Constant time (O(1)) in LinkedList
+        // linkedList.remove(0); --> 24300ns
+
+        // Removing Element in the Middle - Linear time (O(n)) because LinkedList must traverse to find the element
+        // linkedList.remove(500000); --> 4560600ns
+
+        // Removing the Last Element - Constant time (O(1)) for LinkedList
+        linkedList.remove(999999); // --> 19800ns
+
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+        System.out.println("LinkedList:\t" + elapsedTime + " ns");
+
+        // ------------------ ArrayList -------------------
+        startTime = System.nanoTime();
+
+        // Getting First Element - Constant time (O(1)) for ArrayList
+        // arrayList.get(0); --> 3800ns
+
+        // Getting Element in the Middle - Constant time (O(1)) for ArrayList (since it's backed by an array)
+        // arrayList.get(500000); --> 4500ns
+
+        // Getting the Last Element - Constant time (O(1))
+        // arrayList.get(999999); --> 3300ns
+
+        // Removing the First Element - Linear time (O(n)) for ArrayList because all elements need to be shifted
+        // arrayList.remove(0); --> 476600ns
+
+        // Removing Element in the Middle - Linear time (O(n)) for ArrayList, needs to shift the remaining elements
+        // arrayList.remove(500000); --> 242800ns
+
+        // Removing the Last Element - Constant time (O(1)) for ArrayList, no shifting needed
+        arrayList.remove(999999); // --> 7200ns
+
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+        System.out.println("ArrayList:\t" + elapsedTime + " ns");
+    }
 }
-
-// ------------------ LinkedList ------------------
-startTime = System.nanoTime();
-
-// Getting First Element - Constant time (O(1))
-// linkedList.get(0); --> 15600ns (requires traversing the list in LinkedList)
-
-// Getting Element in the Middle - Linear time (O(n))
-// linkedList.get(500000); --> 4440300ns (LinkedList must traverse to the middle)
-
-// Getting the Last Element - Constant time (O(1)) because LinkedList maintains both head and tail pointers
-// linkedList.get(999999); --> 16800ns
-
-// Removing the First Element - Constant time (O(1)) in LinkedList
-// linkedList.remove(0); --> 24300ns
-
-// Removing Element in the Middle - Linear time (O(n)) because LinkedList must traverse to find the element
-// linkedList.remove(500000); --> 4560600ns
-
-// Removing the Last Element - Constant time (O(1)) for LinkedList
-linkedList.remove(999999); // --> 19800ns
-
-endTime = System.nanoTime();
-elapsedTime = endTime - startTime;
-System.out.println("LinkedList:\t" + elapsedTime + " ns");
-
-// ------------------ ArrayList -------------------
-startTime = System.nanoTime();
-
-// Getting First Element - Constant time (O(1)) for ArrayList
-// arrayList.get(0); --> 3800ns
-
-// Getting Element in the Middle - Constant time (O(1)) for ArrayList (since it's backed by an array)
-// arrayList.get(500000); --> 4500ns
-
-// Getting the Last Element - Constant time (O(1))
-// arrayList.get(999999); --> 3300ns
-
-// Removing the First Element - Linear time (O(n)) for ArrayList because all elements need to be shifted
-// arrayList.remove(0); --> 476600ns
-
-// Removing Element in the Middle - Linear time (O(n)) for ArrayList, needs to shift the remaining elements
-// arrayList.remove(500000); --> 242800ns
-
-// Removing the Last Element - Constant time (O(1)) for ArrayList, no shifting needed
-arrayList.remove(999999); // --> 7200ns
-
-endTime = System.nanoTime();
-elapsedTime = endTime - startTime;
-System.out.println("ArrayList:\t" + elapsedTime + " ns");
 ```
 
 **Output**:

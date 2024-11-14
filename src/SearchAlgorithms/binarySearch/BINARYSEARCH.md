@@ -19,7 +19,7 @@
 ## Code Example
 
 **Binary Search Algorithm**:
-```
+```java
 public static int binarySearch(int[] arr, int target) {
 
     int low = 0;
@@ -52,29 +52,36 @@ public static int binarySearch(int[] arr, int target) {
 }
 ```
 
-**Code**:
-```
-// Creating the array
-int[] array = new int[1000000]; //20
+**Example Usage**:
+```java
+public class Main {
 
-// Creating the target value
-int target = 1;
+    public static void main(String[] args) {
 
-// Initializing values for array
-for(int i=0; i<array.length; i++) {
-    array[i] = i;
-}
+        // Creating the array
+        int[] array = new int[1000000]; //20
 
-// There is a built-in Binary Search algorithm --> Arrays.binarySearch()
-// int index = Arrays.binarySearch(array, target);
+        // Creating the target value
+        int target = 1;
 
-// Using our Binary Search algorithm --> O(log n)
-int index = binarySearch(array, target); // 20 steps --> 2**20 = 1048576
+        // Initializing values for array
+        for(int i=0; i<array.length; i++) {
+            array[i] = i;
+        }
 
-if (index != -1) {
-    System.out.println("Target found at index: " + index);
-} else {
-    System.out.println("Target not found!");
+        // There is a built-in Binary Search algorithm --> Arrays.binarySearch()
+        // int index = Arrays.binarySearch(array, target);
+
+        // Using our Binary Search algorithm --> O(log n)
+        int index = binarySearch(array, target); // 20 steps --> 2**20 = 1048576
+
+        if (index != -1) {
+            System.out.println("Target found at index: " + index);
+        } else {
+            System.out.println("Target not found!");
+        }
+
+    }
 }
 ```
 

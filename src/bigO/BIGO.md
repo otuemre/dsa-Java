@@ -56,7 +56,7 @@ Big O notation is a mathematical concept that describes how an algorithm's runti
 ## Code Example:
 
 **Linear Time Function**:
-```
+```java
 // O(n) --> Linear Time
 public static int addUp(int n) {
     int sum = 0;
@@ -68,7 +68,7 @@ public static int addUp(int n) {
 ```
 
 **Constant Time Function**:
-```
+```java
 // O(1) --> Constant Time
 public static int addUp2(int n) {
     return n * (n + 1) / 2;
@@ -76,22 +76,29 @@ public static int addUp2(int n) {
 ```
 
 **Code**:
-```
-long startTime, endTime, elapsedTime;
+```java
+package bigO;
 
-// O(n) - Linear Time
-startTime = System.nanoTime();
-int linear = addUp(100000);
-endTime = System.nanoTime();
-elapsedTime = endTime - startTime;
-System.out.println("Linear Time (O(n)): \tResult = " + linear + ", Time = " + elapsedTime + " ns");
+public class Main {
 
-// O(1) - Constant Time
-startTime = System.nanoTime();
-int constant = addUp2(100000);
-endTime = System.nanoTime();
-elapsedTime = endTime - startTime;
-System.out.println("Constant Time (O(1)): \tResult = " + constant + ", Time = " + elapsedTime + " ns");
+    public static void main(String[] args) {
+        long startTime, endTime, elapsedTime;
+
+        // O(n) - Linear Time
+        startTime = System.nanoTime();
+        int linear = addUp(100000);
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+        System.out.println("Linear Time (O(n)): \tResult = " + linear + ", Time = " + elapsedTime + " ns");
+
+        // O(1) - Constant Time
+        startTime = System.nanoTime();
+        int constant = addUp2(100000);
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+        System.out.println("Constant Time (O(1)): \tResult = " + constant + ", Time = " + elapsedTime + " ns");
+    }
+}
 ```
 
 **Output**:

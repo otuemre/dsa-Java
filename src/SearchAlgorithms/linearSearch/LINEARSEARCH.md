@@ -28,7 +28,7 @@ This project demonstrates the **linear search** algorithm in Java, which involve
 ## Code Example
 
 **LinearSearch Function**:
-```
+```java
 // Linear Search Method with Linear Time Complexity --> O(n)
 public static int linearSearch(int[] arr, int element) {
     // Traverse each element in the array
@@ -44,18 +44,39 @@ public static int linearSearch(int[] arr, int element) {
 }
 ```
 
-**Code**:
-```
-// Creating an array of integers (unsorted)
-int[] arr = {9, 1, 8, 2, 7, 3, 6, 4, 5};
+**Example Usage**:
+```java
+package SearchAlgorithms.interpolationSearch;
 
-// Finding the index of an element (e.g., 1)
-int index = linearSearch(arr, 1);
+public class Main {
 
-if (index != -1) {
-    System.out.println("Element found at index: " + index);
-} else {
-    System.out.println("Element not found!");
+    public static void main(String[] args) {
+        // Creating an array of integers for the best-case scenario (uniformly distributed)
+        int[] bestCaseArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        // Finding the index of a specific element in the best-case scenario
+        int bestCaseIndex = interpolationSearch(bestCaseArray, 8);
+
+        if (bestCaseIndex != -1) {
+            System.out.println("Target found at index: " + bestCaseIndex);
+        } else {
+            System.out.println("Target not found!");
+        }
+
+        System.out.println();
+
+        // Creating an array of integers for the worst-case scenario (non-uniform distribution)
+        int[] worstCaseArray = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
+
+        // Finding the index of a specific element in the worst-case scenario
+        int worstCaseIndex = interpolationSearch(worstCaseArray, 256);
+
+        if (worstCaseIndex != -1) {
+            System.out.println("Target found at index: " + worstCaseIndex);
+        } else {
+            System.out.println("Target not found!");
+        }
+    }
 }
 ```
 

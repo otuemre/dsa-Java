@@ -25,47 +25,51 @@ Since `PriorityQueue` is part of the `Queue` interface, it also supports methods
 
 ## Code Example:
 
-**Imports**:
-```
+**Code Example**:
+```java
+package DataStructures.priorityQueues;
+
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
-```
 
-**Code**:
-```
-// Creating a LinkedList as Queue (FIFO)
-Queue<Double> queue = new LinkedList<>();
+public class Main {
 
-// Adding elements to queue (e.g., GPA Scores)
-queue.offer(3.0);
-queue.offer(2.5);
-queue.offer(4.0);
-queue.offer(1.5);
-queue.offer(2.0);
+    public static void main(String[] args) {
+        // Creating a LinkedList as Queue (FIFO)
+        Queue<Double> queue = new LinkedList<>();
 
-// Displaying elements of the queue (FIFO)
-System.out.println("Queue: ");
-while (!queue.isEmpty()) {
-    System.out.print(queue.poll() + " ");
-}
+        // Adding elements to queue (e.g., GPA Scores)
+        queue.offer(3.0);
+        queue.offer(2.5);
+        queue.offer(4.0);
+        queue.offer(1.5);
+        queue.offer(2.0);
 
-System.out.println();
+        // Displaying elements of the queue (FIFO)
+        System.out.println("Queue: ");
+        while (!queue.isEmpty()) {
+            System.out.print(queue.poll() + " ");
+        }
 
-// Creating PriorityQueue (Ordered by natural order)
-Queue<Double> pQueue = new PriorityQueue<>();
+        System.out.println();
 
-// Adding elements to the PriorityQueue
-pQueue.offer(3.0);
-pQueue.offer(2.5);
-pQueue.offer(4.0);
-pQueue.offer(1.5);
-pQueue.offer(2.0);
+        // Creating PriorityQueue (Ordered by natural order)
+        Queue<Double> pQueue = new PriorityQueue<>();
 
-// Displaying elements of the PriorityQueue (Ordered by ascending GPA)
-System.out.println("PriorityQueue: ");
-while (!pQueue.isEmpty()) {
-    System.out.print(pQueue.poll() + " ");
+        // Adding elements to the PriorityQueue
+        pQueue.offer(3.0);
+        pQueue.offer(2.5);
+        pQueue.offer(4.0);
+        pQueue.offer(1.5);
+        pQueue.offer(2.0);
+
+        // Displaying elements of the PriorityQueue (Ordered by ascending GPA)
+        System.out.println("PriorityQueue: ");
+        while (!pQueue.isEmpty()) {
+            System.out.print(pQueue.poll() + " ");
+        }
+    }
 }
 ```
 

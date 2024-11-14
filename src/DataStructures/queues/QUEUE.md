@@ -25,60 +25,64 @@ Since `Queue` is part of the `Collection` framework, it also supports methods in
 
 ## Code Example:
 
-**Imports**:
-```
+**Example Usage**:
+```java
+package DataStructures.queues;
+
 import java.util.LinkedList;
 import java.util.Queue;
-```
 
-**Code**:
-```
-// We cannot create an instance of Queue directly as it is an interface.
-// Instead, we can instantiate it using a class that implements Queue, like LinkedList or PriorityQueue.
-// Here, we use LinkedList to implement the Queue interface.
-Queue<String> queue = new LinkedList<>();
+public class Main {
+    
+    public static void main(String[] args) {
+        // We cannot create an instance of Queue directly as it is an interface.
+        // Instead, we can instantiate it using a class that implements Queue, like LinkedList or PriorityQueue.
+        // Here, we use LinkedList to implement the Queue interface.
+        Queue<String> queue = new LinkedList<>();
 
-// Adding items to the queue using .offer()
-queue.offer("Karen");
-queue.offer("Chad");
-queue.offer("Steve");
-queue.offer("Herold");
+        // Adding items to the queue using .offer()
+        queue.offer("Karen");
+        queue.offer("Chad");
+        queue.offer("Steve");
+        queue.offer("Herold");
 
-// Displaying the queue
-System.out.println(queue);
+        // Displaying the queue
+        System.out.println(queue);
 
-// Getting the head of the queue using .peek()
-String head = queue.peek();
-System.out.println("Head of the Queue: " + head);
+        // Getting the head of the queue using .peek()
+        String head = queue.peek();
+        System.out.println("Head of the Queue: " + head);
 
-System.out.println();
+        System.out.println();
 
-// Removing the head of the queue using .poll() (new head will be the next item)
-String karen = queue.poll();
-System.out.println("Dequeue: " + karen);
-System.out.println(queue);
+        // Removing the head of the queue using .poll() (new head will be the next item)
+        String karen = queue.poll();
+        System.out.println("Dequeue: " + karen);
+        System.out.println(queue);
 
-System.out.println();
+        System.out.println();
 
-String chad = queue.poll();
-System.out.println("Dequeue: " + chad);
-System.out.println(queue);
+        String chad = queue.poll();
+        System.out.println("Dequeue: " + chad);
+        System.out.println(queue);
 
-System.out.println();
+        System.out.println();
 
-// Using Collection class methods:
-// Checking if the queue is empty
-System.out.println("Is Queue empty? " + queue.isEmpty());
+        // Using Collection class methods:
+        // Checking if the queue is empty
+        System.out.println("Is Queue empty? " + queue.isEmpty());
 
-System.out.println();
+        System.out.println();
 
-// Checking the size of the queue
-System.out.println("Size of the Queue: " + queue.size());
+        // Checking the size of the queue
+        System.out.println("Size of the Queue: " + queue.size());
 
-System.out.println();
+        System.out.println();
 
-// Checking if the queue contains a specific object
-System.out.println("Queue contains 'Steve'? " + queue.contains("Steve"));
+        // Checking if the queue contains a specific object
+        System.out.println("Queue contains 'Steve'? " + queue.contains("Steve"));
+    }
+}
 ```
 
 **Output**:
