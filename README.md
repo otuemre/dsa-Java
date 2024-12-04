@@ -57,6 +57,10 @@
 - **Selection Sort**: Repeatedly finds the minimum element from the unsorted part of the array and swaps it with the element at the beginning of the unsorted section. This process continues until the entire array is sorted. [See More](./src/SortAlgorithms/selectionSort/SELECTIONSORT.md)
 - **Insertion Sort**: Builds the sorted portion of the array one element at a time. For each iteration, it compares the current element to its left and shifts larger elements to the right to make room for the current element. [See More](./src/SortAlgorithms/insertionSort/INSERTIONSORT.md)
 
+## Recursion
+
+- **Recursion**: is a process where a method calls itself to solve a problem by breaking it into smaller sub-problems. It is a powerful technique often used in mathematical computations, advanced sorting algorithms, and navigating data structures like trees. [See More](./src/Recursion/RECURSION.md)
+
 ## Acknowledgments
 
 - Data Structures & Algorithm Playlist by [Bro Code](https://www.youtube.com/@BroCodez)
