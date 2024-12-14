@@ -56,6 +56,7 @@
 - **Bubble Sort**: Repeatedly compares and swaps adjacent elements if they are out of order. After each full pass through the array, the largest unsorted element is moved to its correct position at the end, creating a "bubble" effect as the largest elements accumulate at the end of the array. [See More](./src/SortAlgorithms/bubbleSort/BUBBLESORT.md)
 - **Selection Sort**: Repeatedly finds the minimum element from the unsorted part of the array and swaps it with the element at the beginning of the unsorted section. This process continues until the entire array is sorted. [See More](./src/SortAlgorithms/selectionSort/SELECTIONSORT.md)
 - **Insertion Sort**: Builds the sorted portion of the array one element at a time. For each iteration, it compares the current element to its left and shifts larger elements to the right to make room for the current element. [See More](./src/SortAlgorithms/insertionSort/INSERTIONSORT.md)
+- **Merge Sort**: Divide-and-conquer algorithm that recursively divides an array into two halves, sorts each half, and merges them back together in sorted order. This process continues until the entire array is sorted. [See More](./src/SortAlgorithms/mergeSort/MERGESORT.md)
 
 ## Recursion
 
