@@ -33,6 +33,7 @@
 - **LinkedList**: A data structure that stores elements as nodes in two parts: **data** and **address**. Nodes in a linked list are stored in non-contiguous memory locations and are connected via pointers. [See More](./src/DataStructures/linkedLists/LINKEDLIST.md)
 - **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/DataStructures/dynamicArrays/DYNAMICARRAY.md)
 - **ArrayList vs LinkedList**: An `ArrayList` in Java stores elements in a dynamic array, providing fast access by index but slower insertions and deletions, especially in large lists. A `LinkedList` stores elements in nodes linked by pointers, allowing fast insertions and deletions but slower access by index. [See More](./src/DataStructures/arraylistVsLinkedlist/COMPARISON.md)
+- **Hashtable**: A data structure that maps unique keys to values. It uses hashing to compute the storage index for fast insertion, lookup, and deletion of key-value pairs. [See More](./src/DataStructures/hashTables/HASHTABLE.md)
 
 ## Big O Notation
 
