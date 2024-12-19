@@ -64,6 +64,9 @@
 
 - **Recursion**: is a process where a method calls itself to solve a problem by breaking it into smaller sub-problems. It is a powerful technique often used in mathematical computations, advanced sorting algorithms, and navigating data structures like trees. [See More](./src/Recursion/RECURSION.md)
 
+## Graphs
+- **Graphs**: A versatile data structure used to model relationships between objects. Graphs are fundamental in solving problems across domains like computer networks, social networks, navigation systems, and more. [See More](./src/Graphs/GRAPHS.md)
+
 ## Acknowledgments
 
 - Data Structures & Algorithm Playlist by [Bro Code](https://www.youtube.com/@BroCodez)
