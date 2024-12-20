@@ -90,11 +90,17 @@ A **Graph** is a data structure consisting of:
 ```java
 public class Node {
 
-    char data;
+   private final char data; // Data stored in the node
 
-    public Node(char data) {
-        this.data = data;
-    }
+   // Constructor to initialize the node with data
+   public Node(char data) {
+      this.data = data;
+   }
+
+   // Getter to access the data
+   public char getData() {
+      return data;
+   }
 }
 ```
 
@@ -102,45 +108,52 @@ public class Node {
 ```java
 public class Graph {
 
-    ArrayList<Node> nodes;
-    int[][] matrix;
+   private final ArrayList<Node> nodes; // List of nodes (vertices) in the graph
+   private final int[][] matrix; // Adjacency matrix to represent edges
 
-    public Graph(int size) {
-        nodes = new ArrayList<>(size);
-        matrix = new int[size][size];
-    }
+   // Constructor to initialize the graph with a specified size
+   public Graph(int size) {
+      nodes = new ArrayList<>(size);
+      matrix = new int[size][size];
+   }
 
-    public void addNode(Node node) {
-        nodes.add(node);
-    }
+   // Add a node (vertex) to the graph
+   public void addNode(Node node) {
+      if (nodes.size() < matrix.length) {
+         nodes.add(node);
+      } else {
+         System.out.println("Cannot add more nodes. Graph is at full capacity.");
+      }
+   }
 
-    public void addEdge(int src, int dst) {
-        matrix[src][dst] = 1;
-    }
+   // Add a directed edge between two nodes (src -> dst)
+   public void addEdge(int src, int dst) {
+      matrix[src][dst] = 1;
+   }
 
-    public boolean checkEdge(int src, int dst) {
-        return matrix[src][dst] == 1;
-    }
+   // Check if an edge exists between two nodes
+   public boolean checkEdge(int src, int dst) {
+      return matrix[src][dst] == 1;
+   }
 
-    public void print() {
+   // Print the adjacency matrix along with node labels
+   public void print() {
+      // Print the header row with node labels
+      System.out.print("   ");
+      for (Node node : nodes) {
+         System.out.print(node.getData() + "  ");
+      }
+      System.out.println();
 
-        // Print Nodes (Optional)
-        for (Node node : nodes) {
-            System.out.print("\t" + node.data);
-        }
-        System.out.println();
-
-        for (int i = 0; i < matrix.length; i++) {
-
-            System.out.print(nodes.get(i).data + "\t");
-
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
-        
-    }
+      // Print each row with node labels and corresponding edges
+      for (int i = 0; i < nodes.size(); i++) {
+         System.out.print(nodes.get(i).getData() + "  ");
+         for (int j = 0; j < matrix[i].length; j++) {
+            System.out.print(matrix[i][j] + "  ");
+         }
+         System.out.println();
+      }
+   }
 }
 ```
 
@@ -148,57 +161,47 @@ public class Graph {
 ```java
 import java.util.ArrayList;
 
-public class Graph {
-
-    ArrayList<Node> nodes;
-    int[][] matrix;
-
-    public Graph(int size) {
-        nodes = new ArrayList<>(size);
-        matrix = new int[size][size];
-    }
-
-    public void addNode(Node node) {
-        nodes.add(node);
-    }
-
-    public void addEdge(int src, int dst) {
-        matrix[src][dst] = 1;
-    }
-
-    public boolean checkEdge(int src, int dst) {
-        return matrix[src][dst] == 1;
-    }
-
-    public void print() {
-
-        // Print Nodes (Optional)
-        System.out.print(" ");
-        for (Node node: nodes) {
-            System.out.print("  " + node.data);
-        }
-        System.out.println();
-
-        for (int i=0; i< matrix.length; i++) {
-
-            System.out.print(nodes.get(i).data + "  ");
-
-            for (int j=0; j<matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + "  ");
-            }
-            System.out.println();
-        }
-    }
+public class AdjacencyMatrix {
     
+   public static void main(String[] args) {
+      // Initialize a graph with 5 nodes
+      Graph graph = new Graph(5);
+
+      // Adding nodes (vertices) to the graph
+      graph.addNode(new Node('A')); // Node 0
+      graph.addNode(new Node('B')); // Node 1
+      graph.addNode(new Node('C')); // Node 2
+      graph.addNode(new Node('D')); // Node 3
+      graph.addNode(new Node('E')); // Node 4
+
+      // Adding edges between the nodes
+      graph.addEdge(0, 1); // Edge: A -> B
+      graph.addEdge(1, 2); // Edge: B -> C
+      graph.addEdge(2, 3); // Edge: C -> D
+      graph.addEdge(2, 4); // Edge: C -> E
+      graph.addEdge(4, 0); // Edge: E -> A
+      graph.addEdge(4, 2); // Edge: E -> C
+
+      // Printing the adjacency matrix
+      graph.print();
+
+      // Checking if edge exists
+      System.out.println();
+      System.out.println("Checking if edge exist between 'C' and 'E': " + graph.checkEdge(2, 4));
+      System.out.println("Checking if edge exist between 'A' and 'E': " + graph.checkEdge(0, 4));
+   }
 }
 ```
 
 **Output**:
 ```text
-   A  B  C  D  E
+   A  B  C  D  E  
 A  0  1  0  0  0  
 B  0  0  1  0  0  
 C  0  0  0  1  1  
 D  0  0  0  0  0  
 E  1  0  1  0  0  
+
+Checking if edge exist between 'C' and 'E': true
+Checking if edge exist between 'A' and 'E': false 
 ```
