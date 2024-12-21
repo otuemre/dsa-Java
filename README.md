@@ -65,7 +65,13 @@
 - **Recursion**: is a process where a method calls itself to solve a problem by breaking it into smaller sub-problems. It is a powerful technique often used in mathematical computations, advanced sorting algorithms, and navigating data structures like trees. [See More](./src/Recursion/RECURSION.md)
 
 ## Graphs
-- **Graphs**: A versatile data structure used to model relationships between objects. Graphs are fundamental in solving problems across domains like computer networks, social networks, navigation systems, and more. [See More](./src/Graphs/GRAPHS.md)
+- **Graphs**: A powerful and flexible data structure for representing relationships between objects. Graphs consist of **vertices (nodes)** and **edges**, which can be **directed** (one-way relationships) or **undirected** (two-way relationships).
+- **Applications**: Graphs are widely used in domains like **network routing**, **social media connections**, **navigation systems**, **dependency resolution**, and more.
+- **Key Representations**:
+    - **Adjacency Matrix**: A 2D array suitable for dense graphs, providing constant-time edge checks.
+    - **Adjacency List**: A more space-efficient structure for sparse graphs.
+- **Common Algorithms**: Graph traversal (DFS, BFS), shortest paths (Dijkstra's, Bellman-Ford), and spanning trees (Prim's, Kruskal's).
+- [Learn More and See Examples](./src/Graphs/GRAPHS.md)
 
 ## Acknowledgments
 
