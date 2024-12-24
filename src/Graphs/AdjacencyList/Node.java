@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.AdjacencyList;
 
 public class Node {
     char data;
