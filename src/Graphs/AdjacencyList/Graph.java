@@ -29,7 +29,7 @@ public class Graph {
         Node dstNode = adjacencyList.get(dst).getFirst();
 
         for (Node node:crrList) {
-            if (node.data == dstNode.data) {
+            if (node.getData() == dstNode.getData()) {
                 return true;
             }
         }
@@ -41,7 +41,7 @@ public class Graph {
 
         for (LinkedList<Node> crrList : adjacencyList) {
             for (Node node : crrList) {
-                System.out.print(node.data + " -> ");
+                System.out.print(node.getData() + " -> ");
             }
             System.out.println();
         }
