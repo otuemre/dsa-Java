@@ -86,6 +86,8 @@ A **Graph** is a data structure consisting of:
 
 ## Code Example
 
+### Adjacency Matrix Example
+
 **Node Code**:
 ```java
 public class Node {
@@ -204,4 +206,126 @@ E  1  0  1  0  0
 
 Checking if edge exist between 'C' and 'E': true
 Checking if edge exist between 'A' and 'E': false 
+```
+
+### Adjacency List Example
+
+**Node Code**:
+```java
+public class Node {
+
+    private final char data; // Data stored in the node
+
+    // Constructor to initialize the node with data
+    public Node(char data) {
+        this.data = data;
+    }
+
+    // Getter to access the data
+    public char getData() {
+        return data;
+    }
+}
+```
+
+**Graph Code**:
+```java
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Graph {
+
+    private final ArrayList<LinkedList<Node>> adjacencyList; // List of adjacency lists to represent edges
+
+    // Constructor to initialize the graph
+    public Graph() {
+        adjacencyList = new ArrayList<>();
+    }
+
+    // Add a node (vertex) to the graph
+    public void addNode(Node node) {
+        LinkedList<Node> currentList = new LinkedList<>();
+        currentList.add(node); // Each adjacency list starts with the node itself
+        adjacencyList.add(currentList);
+    }
+
+    // Add a directed edge between two nodes (src -> dst)
+    public void addEdge(int src, int dst) {
+        if (src < adjacencyList.size() && dst < adjacencyList.size()) {
+            LinkedList<Node> srcList = adjacencyList.get(src);
+            Node dstNode = adjacencyList.get(dst).getFirst(); // Get the destination node
+            srcList.add(dstNode); // Add the destination node to the source's adjacency list
+        } else {
+            System.out.println("Invalid node indices. Edge not added.");
+        }
+    }
+
+    // Check if an edge exists between two nodes
+    public boolean checkEdge(int src, int dst) {
+        if (src < adjacencyList.size() && dst < adjacencyList.size()) {
+            LinkedList<Node> srcList = adjacencyList.get(src);
+            Node dstNode = adjacencyList.get(dst).getFirst();
+            return srcList.contains(dstNode); // Check if the destination node exists in the source's adjacency list
+        }
+        return false;
+    }
+
+    // Print the adjacency list
+    public void print() {
+        for (LinkedList<Node> nodes : adjacencyList) {
+            System.out.print(nodes.getFirst().getData() + " -> ");
+            for (int j = 1; j < nodes.size(); j++) { // Skip the first node (itself)
+                System.out.print(nodes.get(j).getData() + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+**Main Code**:
+```java
+public class AdjacencyList {
+    
+    public static void main(String[] args) {
+        // Initialize a graph
+        Graph graph = new Graph();
+
+        // Adding nodes (vertices) to the graph
+        graph.addNode(new Node('A')); // Node 0
+        graph.addNode(new Node('B')); // Node 1
+        graph.addNode(new Node('C')); // Node 2
+        graph.addNode(new Node('D')); // Node 3
+        graph.addNode(new Node('E')); // Node 4
+
+        // Adding edges between the nodes
+        graph.addEdge(0, 1); // Edge: A -> B
+        graph.addEdge(1, 2); // Edge: B -> C
+        graph.addEdge(1, 4); // Edge: B -> E
+        graph.addEdge(2, 3); // Edge: C -> D
+        graph.addEdge(2, 4); // Edge: C -> E
+        graph.addEdge(4, 0); // Edge: E -> A
+        graph.addEdge(4, 2); // Edge: E -> C
+
+        // Printing the adjacency list
+        graph.print();
+
+        // Checking if edges exist
+        System.out.println();
+        System.out.println("Checking if edge exists between 'A' and 'D': " + graph.checkEdge(0, 3)); // false
+        System.out.println("Checking if edge exists between 'B' and 'E': " + graph.checkEdge(1, 4)); // true
+    }
+}
+```
+
+**Output**:
+```text
+A -> B 
+B -> C E 
+C -> D E 
+D -> 
+E -> A C 
+
+Checking if edge exists between 'A' and 'D': false
+Checking if edge exists between 'B' and 'E': true
 ```
