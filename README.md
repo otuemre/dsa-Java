@@ -23,7 +23,7 @@
 
 ## Why to Learn DS & A?
 1. `Time` and `Memory` efficient code can be written.
-2. `DS & A` is involved in commonly asked questions in job interviews. 
+2. `DS & A` is involved in commonly asked questions in job interviews.
 
 ## Basic Data Structures
 
@@ -68,8 +68,9 @@
 - **Graphs**: A powerful and flexible data structure for representing relationships between objects. Graphs consist of **vertices (nodes)** and **edges**, which can be **directed** (one-way relationships) or **undirected** (two-way relationships).
 - **Applications**: Graphs are widely used in domains like **network routing**, **social media connections**, **navigation systems**, **dependency resolution**, and more.
 - **Key Representations**:
-    - **Adjacency Matrix**: A 2D array suitable for dense graphs, providing constant-time edge checks.
-    - **Adjacency List**: A more space-efficient structure for sparse graphs.
+  - **Adjacency Matrix**: A 2D array suitable for dense graphs, providing constant-time edge checks.
+  - **Adjacency List**: A more space-efficient structure for sparse graphs.
+    - **Depth First Search (DFS)**: A traversal algorithm that explores depth before breadth, often used for pathfinding, cycle detection, and topological sorting. [See More](./src/Graphs/DepthFirstSearch/DFS.md)
 - **Common Algorithms**: Graph traversal (DFS, BFS), shortest paths (Dijkstra's, Bellman-Ford), and spanning trees (Prim's, Kruskal's).
 - [Learn More and See Examples](./src/Graphs/GRAPHS.md)
 
