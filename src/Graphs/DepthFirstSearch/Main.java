@@ -22,7 +22,6 @@ public class Main {
         Graph graph = new Graph(5);
 
         // Adding nodes (vertices) to the graph
-        System.out.println("Adding nodes to the graph...");
         graph.addNode(new Node('A')); // Node 0
         graph.addNode(new Node('B')); // Node 1
         graph.addNode(new Node('C')); // Node 2
@@ -30,7 +29,6 @@ public class Main {
         graph.addNode(new Node('E')); // Node 4
 
         // Adding edges between the nodes
-        System.out.println("\nAdding edges to the graph...");
         graph.addEdge(0, 1); // Edge: A -> B
         graph.addEdge(1, 2); // Edge: B -> C
         graph.addEdge(2, 3); // Edge: C -> D
@@ -39,7 +37,7 @@ public class Main {
         graph.addEdge(4, 2); // Edge: E -> C
 
         // Printing the adjacency matrix
-        System.out.println("\nAdjacency Matrix:");
+        System.out.println("Adjacency Matrix:");
         graph.print();
 
         // Perform Depth First Search starting from node C
