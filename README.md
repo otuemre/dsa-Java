@@ -74,6 +74,9 @@
 - **Common Algorithms**: Graph traversal (DFS, BFS), shortest paths (Dijkstra's, Bellman-Ford), and spanning trees (Prim's, Kruskal's).
 - [Learn More and See Examples](./src/Graphs/GRAPHS.md)
 
+## License
+This project is licensed under the [MIT License](./LICENSE.md).
+
 ## Acknowledgments
 
 - Data Structures & Algorithm Playlist by [Bro Code](https://www.youtube.com/@BroCodez)
