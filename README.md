@@ -64,7 +64,9 @@
 
 - **Recursion**: is a process where a method calls itself to solve a problem by breaking it into smaller sub-problems. It is a powerful technique often used in mathematical computations, advanced sorting algorithms, and navigating data structures like trees. [See More](./src/Recursion/RECURSION.md)
 
-## Graphs
+## Graphs & Trees
+
+### Graphs
 - **Graphs**: A powerful and flexible data structure for representing relationships between objects. Graphs consist of **vertices (nodes)** and **edges**, which can be **directed** (one-way relationships) or **undirected** (two-way relationships).
 - **Applications**: Graphs are widely used in domains like **network routing**, **social media connections**, **navigation systems**, **dependency resolution**, and more.
 - **Key Representations**:
@@ -73,6 +75,12 @@
     - **Depth First Search (DFS)**: A traversal algorithm that explores depth before breadth, often used for pathfinding, cycle detection, and topological sorting. [See More](./src/Graphs/DepthFirstSearch/DFS.md)
 - **Common Algorithms**: Graph traversal (DFS, BFS), shortest paths (Dijkstra's, Bellman-Ford), and spanning trees (Prim's, Kruskal's).
 - [Learn More and See Examples](./src/Graphs/GRAPHS.md)
+
+### Trees
+- **Trees**: A hierarchical, non-linear data structure where nodes are organized in a parent-child relationship. Trees are widely used for representing hierarchies and enabling efficient searching, sorting, and data manipulation.
+- **Applications**: Trees are used in **file systems**, **databases (e.g., B-Trees)**, **search engines**, **network routing**, and **DOM structures** in web development.
+- **Components**: Trees consist of a **root**, **branch nodes**, **leaf nodes**, and various other relationships like parent, child, siblings, and cousins.
+- [Learn More and See Examples](./src/Trees/TREES.md)
 
 ## License
 This project is licensed under the [MIT License](./LICENSE.md).
