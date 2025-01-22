@@ -2,16 +2,29 @@
 
 **Note**: This project will follow "[Bro Code](https://www.youtube.com/@BroCodez) - Data Structures and Algorithms" playlist!
 
-## Project Content
-- Basic Data Structures
-- Big O Notation
-- Searching Algorithms
-- Sorting Algorithms
-- Graphs
-- Trees
+---
+
+## Table of Contents
+1. [What is Data Structure?](#what-is-data-structure)
+2. [What is an Algorithm?](#what-is-an-algorithm)
+3. [Why Learn DS & A?](#why-to-learn-ds--a)
+4. [Data Structures](#data-structures)
+5. [Big O Notation](#big-o-notation)
+6. [Searching Algorithms](#searching-algorithms)
+7. [Sorting Algorithms](#sorting-algorithms)
+8. [Recursion](#recursion)
+9. [Graphs & Trees](#graphs--trees)
+10. [Future Improvements](#future-improvements)
+11. [License](#license)
+12. [Acknowledgments](#acknowledgments)
+
+---
 
 ## What is Data Structure
+
 **Data Structure**: A named location used to store and organize data. For example, a family tree represents a hierarchy of family relationships.
+
+---
 
 ## What is an Algorithm
 
@@ -21,11 +34,15 @@
 - Add toppings
 - ...
 
+---
+
 ## Why to Learn DS & A?
 1. `Time` and `Memory` efficient code can be written.
 2. `DS & A` is involved in commonly asked questions in job interviews.
 
-## Basic Data Structures
+---
+
+## Data Structures
 
 - **Stack**: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the top, similar to a stack of books. [See more](./src/DataStructures/stacks/STACK.md)
 - **Queue**: A First-In-First-Out (FIFO) data structure where elements are added at the back and removed from the front, like a line of people waiting. It is useful for processing items in the order they arrive. [See More](./src/DataStructures/queues/QUEUE.md)
@@ -34,6 +51,8 @@
 - **DynamicArray**: A resizable array that can grow or shrink at runtime. This implementation creates a custom dynamic array, similar in functionality to Java’s ArrayList. [See More](./src/DataStructures/dynamicArrays/DYNAMICARRAY.md)
 - **ArrayList vs LinkedList**: An `ArrayList` in Java stores elements in a dynamic array, providing fast access by index but slower insertions and deletions, especially in large lists. A `LinkedList` stores elements in nodes linked by pointers, allowing fast insertions and deletions but slower access by index. [See More](./src/DataStructures/arraylistVsLinkedlist/COMPARISON.md)
 - **Hashtable**: A data structure that maps unique keys to values. It uses hashing to compute the storage index for fast insertion, lookup, and deletion of key-value pairs. [See More](./src/DataStructures/hashTables/HASHTABLE.md)
+
+---
 
 ## Big O Notation
 
@@ -46,11 +65,15 @@
 
 ![Big-O Complexity Cheatsheet](./images/big-o-cheat-sheet-poster.png)
 
+---
+
 ## Searching Algorithms
 
 - **LinearSearch**: Iterates through a collection one element at a time, comparing each element to the target. If it finds a match, it returns the index of that element; otherwise, it returns `-1`, indicating that the element is not present in the collection. The time complexity of binary search is `O(n)`. [See More](./src/SearchAlgorithms/linearSearch/LINEARSEARCH.md)
 - **BinarySearch**: Works by eliminating half of the search space with each step, making it significantly faster than linear search for large, sorted arrays. The time complexity of binary search is `O(log n)`. [See More](./src/SearchAlgorithms/binarySearch/BINARYSEARCH.md)
 - **InterpolationSearch**: Finds the position of a target value within a sorted array by calculating a position estimate (probe) based on the values of the target and the current bounds. It is most efficient with uniformly distributed data `O(log(log(n)))`. [See More](./src/SearchAlgorithms/interpolationSearch/INTERPOLATION.md)
+
+---
 
 ## Sorting Algorithms
 
@@ -60,9 +83,13 @@
 - **Merge Sort**: Divide-and-conquer algorithm that recursively divides an array into two halves, sorts each half, and merges them back together in sorted order. This process continues until the entire array is sorted. [See More](./src/SortAlgorithms/mergeSort/MERGESORT.md)
 - **Quick Sort**: Divide-and-conquer algorithm that partitions an array around a pivot element, recursively sorts the left and right partitions, and combines them to produce a sorted array. [See More](./src/SortAlgorithms/quickSort/QUICKSORT.md)
 
+---
+
 ## Recursion
 
 - **Recursion**: is a process where a method calls itself to solve a problem by breaking it into smaller sub-problems. It is a powerful technique often used in mathematical computations, advanced sorting algorithms, and navigating data structures like trees. [See More](./src/Recursion/RECURSION.md)
+
+---
 
 ## Graphs & Trees
 
@@ -82,8 +109,23 @@
 - **Components**: Trees consist of a **root**, **branch nodes**, **leaf nodes**, and various other relationships like parent, child, siblings, and cousins.
 - [Learn More and See Examples](./src/Trees/TREES.md)
 
+---
+
+## Future Improvements
+
+Planned additions to the repository:
+- **Radix Sort**: An efficient non-comparative sorting algorithm.
+- **A\* Algorithm**: An advanced pathfinding and graph traversal algorithm.
+- **Traveling Salesman Problem**: Optimization problem to find the shortest possible route through a set of points.
+- **Sliding Window Techniques**: A common approach for solving problems related to arrays and strings.
+- **Other Advanced Algorithms**: Divide-and-conquer, dynamic programming, and more.
+
+---
+
 ## License
 This project is licensed under the [MIT License](./LICENSE.md).
+
+---
 
 ## Acknowledgments
 
